@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">SimpleHttpClient</string>
+	<string name="title_home">Home</string>
+	<string name="title_dashboard">Dashboard</string>
+	<string name="title_notifications">Notifications</string>
+	<string name="rediff_rss_feed">REDIFF RSS FEED</string>
+	<string name="cinema_blend_rss_feed">CINEMA BLEND RSS FEED</string>
+</resources>
