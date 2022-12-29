@@ -1,5 +1,6 @@
 package com.sersoft.simplehttpclient;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -29,6 +30,7 @@ public class WebActivity extends AppCompatActivity {
         webView.loadUrl(url);
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     private void initWebView() {
         webView.setWebChromeClient(new MyWebChromeClient(this));
         webView.clearCache(true);

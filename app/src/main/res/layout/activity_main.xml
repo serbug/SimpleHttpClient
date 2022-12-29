@@ -4,37 +4,61 @@
                                                    xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
                                                    tools:ignore="MissingConstraints"
-                                                   android:layout_height="match_parent">
+                                                   android:layout_height="match_parent"
+                                                   android:orientation="vertical"
+                                                   tools:context=".MainActivity">
 	
-	<Button
-			android:id="@+id/btnRediff"
-			android:layout_width="300dp"
+	<!--on below line we are creating edit text
+         for adding a new item to list-->
+	
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/editItemInputLayout"
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
-			android:layout_alignParentBottom="true"
-			android:layout_centerHorizontal="true"
-			android:text="@string/rediff_rss_feed"
-			app:layout_constraintBottom_toBottomOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/btnCinemaBlend"
-			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_margin="4dp"
+			android:layout_toStartOf="@id/idBtnAdd"
+			
 			app:layout_constraintStart_toStartOf="parent"
-			android:layout_marginTop="35dp"
-			android:layout_marginEnd="8dp"
-			android:layout_marginStart="8dp"
-			android:layout_marginBottom="35dp"/>
-	
-	<Button
-			android:id="@+id/btnCinemaBlend"
-			android:layout_width="300dp"
-			android:layout_height="wrap_content"
-			android:layout_alignLeft="@+id/btnRediff"
-			android:layout_alignParentBottom="true"
-			android:layout_alignStart="@+id/btnRediff"
-			android:text="@string/cinema_blend_rss_feed"
-			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintTop_toTopOf="parent"
-			app:layout_constraintVertical_bias="0.736"
-			android:layout_marginEnd="8dp"
+			android:layout_marginTop="8dp"
+			app:layout_constraintEnd_toStartOf="@+id/idBtnAdd">
+		
+		<EditText
+				android:id="@+id/idEdtItemName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				
+				android:hint="@string/enter_rss_link"
+				tools:ignore="HardcodedText,SpeakableTextPresentCheck"/>
+	
+	</com.google.android.material.textfield.TextInputLayout>
+	
+	<!--button for adding item from edit text to list-->
+	<Button
+			android:id="@+id/idBtnAdd"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:layout_margin="4dp"
+			android:text="@string/add"
+			android:textAllCaps="false"
+			app:layout_constraintTop_toTopOf="parent"
+			android:layout_marginTop="20dp"
 			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_marginEnd="8dp"/>
+	
+	<!--list view to display list of languages-->
+	<ListView
+			android:id="@+id/idLV"
+			android:layout_width="413dp"
+			android:layout_height="667dp"
+			android:layout_below="@id/editItemInputLayout"
+			app:layout_constraintTop_toBottomOf="@+id/editItemInputLayout"
 			app:layout_constraintStart_toStartOf="parent"
-			android:layout_marginStart="8dp"/>
+			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginTop="25dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

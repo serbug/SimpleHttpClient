@@ -18,9 +18,9 @@ public class RSSFeedActivity extends ListActivity {
     ArrayList<HashMap<String, String>> rssItemList = new ArrayList<>();
     RSSParser rssParser = new RSSParser();
     List<RSSItem> rssItems = new ArrayList<>();
-    private static String TAG_TITLE = "title";
-    private static String TAG_LINK = "link";
-    private static String TAG_PUB_DATE = "pubDate";
+    private static final String TAG_TITLE = "title";
+    private static final String TAG_LINK = "link";
+    private static final String TAG_PUB_DATE = "pubDate";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,7 +77,8 @@ public class RSSFeedActivity extends ListActivity {
 
                 // adding each child node to HashMap key => value
                 String givenDateString = item.pubdate.trim();
-                @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z");
+                @SuppressLint("SimpleDateFormat")
+                SimpleDateFormat sdf = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z");
                 try {
                     Date mDate = sdf.parse(givenDateString);
                     SimpleDateFormat sdf2 = new SimpleDateFormat("EEEE, dd MMMM yyyy - hh:mm a", Locale.US);
