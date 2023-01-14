@@ -1,6 +1,3 @@
-**<p align="center">[![](https://iili.io/HTc6Kge.md.png)](https://fcim.utm.md)<p/>**
-
-
 ## <p align="center"> <span style="color:grey">**🔥Simple HTTP Client (Web Service Emulation)**</span> <p/>
 
 ## 📌Obiective
